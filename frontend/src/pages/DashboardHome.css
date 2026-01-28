@@ -1,0 +1,596 @@
+:root {
+  --primary-blue: #054acc;
+  --bg-light-gray: #f9f9f9;
+  --card-bg: #ffffff;
+  --text-dark: #333;
+  --text-light: #8a8a8a;
+  --border-light: #eee;
+  
+  --stat-yellow: #fef9e7;
+  --stat-yellow-text: #f39c12;
+  --stat-green: #e8f8f5;
+  --stat-green-text: #1abc9c;
+  --stat-blue: #eaf2f8;
+  --stat-blue-text: #3498db;
+}
+
+.main {
+  width: 100%;
+}
+
+.main > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.container-top,
+.container-middle,
+.container-last {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.head {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.head h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.container-top {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "card1  card2  card3  card4";
+  gap: 20px;
+}
+
+.container-top .head {
+  grid-area: header; 
+}
+
+.first,
+.sec,
+.third,
+.forth {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.first p,
+.sec p,
+.third p,
+.forth p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.first h2,
+.sec h2,
+.third h2,
+.forth h2 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  font-weight: 600;
+}
+
+.first,
+.forth {
+  background-color: var(--stat-yellow);
+}
+
+.first p,
+.forth p {
+  color: var(--stat-yellow-text);
+}
+
+.sec {
+  background-color: var(--stat-green);
+}
+
+.sec p {
+  color: var(--stat-green-text);
+}
+
+.third {
+  background-color: var(--stat-blue);
+}
+
+.third p {
+  color: var(--stat-blue-text);
+}
+
+.first-application h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.first-application label {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 5px;
+  display: block;
+}
+
+.first-application p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+.desc {
+  background-color: var(--bg-light-gray);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.desc p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.create,
+.view-msg {
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 15px;
+}
+
+.create:hover,
+.view-msg:hover {
+  border-style: solid;
+  border-color: var(--primary-blue);
+  background-color: #f0f5ff;
+}
+
+.action-box {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.create h2,
+.view-msg h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Large desktops (1400px and below) */
+@media (max-width: 1400px) {
+  .main > h1 {
+    font-size: 2.3rem;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 2.3rem;
+  }
+}
+
+/* Medium desktops (1200px and below) */
+@media (max-width: 1200px) {
+  .main > h1 {
+    font-size: 2.2rem;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 25px;
+  }
+
+  .container-top {
+    grid-template-areas:
+      "header header header header"
+      "card1  card2  card3  card4";
+    gap: 15px;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 2.2rem;
+  }
+
+  .first h2,
+  .sec h2,
+  .third h2,
+  .forth h2 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets landscape (1024px and below) */
+@media (max-width: 1024px) {
+  .main > h1 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .head h1 {
+    font-size: 1.4rem;
+  }
+
+  .container-top {
+    grid-template-areas:
+      "header header"
+      "card1  card2"
+      "card3  card4";
+    gap: 15px;
+  }
+
+  .first,
+  .sec,
+  .third,
+  .forth {
+    padding: 18px;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 2rem;
+  }
+
+  .action {
+    gap: 15px;
+  }
+
+  .create,
+  .view-msg {
+    padding: 25px;
+  }
+
+  .action-box {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets portrait (768px and below) */
+@media (max-width: 768px) {
+  .main > h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .head {
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+
+  .head h1 {
+    font-size: 1.3rem;
+  }
+
+  .container-top {
+    grid-template-areas:
+      "header"
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+    gap: 12px;
+  }
+
+  .first,
+  .sec,
+  .third,
+  .forth {
+    padding: 15px;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 1.8rem;
+  }
+
+  .first h2,
+  .sec h2,
+  .third h2,
+  .forth h2 {
+    font-size: 0.9rem;
+  }
+
+  .first-application h3 {
+    font-size: 1.1rem;
+  }
+
+  .first-application label {
+    font-size: 0.85rem;
+  }
+
+  .first-application p {
+    font-size: 0.95rem;
+  }
+
+  .desc {
+    padding: 12px;
+    margin-top: 12px;
+  }
+
+  .desc p {
+    font-size: 0.95rem;
+  }
+
+  .action {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .create,
+  .view-msg {
+    padding: 20px;
+  }
+
+  .action-box {
+    font-size: 1.6rem;
+  }
+
+  .create h2,
+  .view-msg h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .main > h1 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+  }
+
+  .head {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .head h1 {
+    font-size: 1.2rem;
+  }
+
+  .container-top {
+    gap: 10px;
+  }
+
+  .first,
+  .sec,
+  .third,
+  .forth {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 1.6rem;
+    margin-bottom: 3px;
+  }
+
+  .first h2,
+  .sec h2,
+  .third h2,
+  .forth h2 {
+    font-size: 0.85rem;
+  }
+
+  .first-application h3 {
+    font-size: 1rem;
+  }
+
+  .first-application label {
+    font-size: 0.8rem;
+    margin-top: 3px;
+  }
+
+  .first-application p {
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  .desc p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .action {
+    gap: 10px;
+  }
+
+  .create,
+  .view-msg {
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .action-box {
+    font-size: 1.5rem;
+  }
+
+  .create h2,
+  .view-msg h2 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+  .main > h1 {
+    font-size: 1.4rem;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .head h1 {
+    font-size: 1.1rem;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 1.4rem;
+  }
+
+  .first h2,
+  .sec h2,
+  .third h2,
+  .forth h2 {
+    font-size: 0.8rem;
+  }
+
+  .first-application h3 {
+    font-size: 0.95rem;
+  }
+
+  .first-application label {
+    font-size: 0.75rem;
+  }
+
+  .first-application p {
+    font-size: 0.85rem;
+  }
+
+  .desc p {
+    font-size: 0.85rem;
+  }
+
+  .create,
+  .view-msg {
+    padding: 15px;
+  }
+
+  .action-box {
+    font-size: 1.3rem;
+  }
+
+  .create h2,
+  .view-msg h2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .main > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .container-top,
+  .container-middle,
+  .container-last {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .head {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .head h1 {
+    font-size: 1.2rem;
+  }
+
+  .first,
+  .sec,
+  .third,
+  .forth {
+    padding: 10px;
+  }
+
+  .first p,
+  .sec p,
+  .third p,
+  .forth p {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .create,
+  .view-msg {
+    padding: 15px;
+    gap: 8px;
+  }
+}

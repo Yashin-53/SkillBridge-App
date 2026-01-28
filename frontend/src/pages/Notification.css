@@ -1,0 +1,118 @@
+
+.notification-bell {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; 
+  cursor: pointer;
+}
+
+.bell-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+
+.bell-button:hover {
+  color: #007bff;
+}
+
+.unread-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff3b30;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* --- Dropdown Menu --- */
+.notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  width: 320px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  z-index: 1000; /* Ensure it floats above other content */
+  overflow: hidden;
+}
+
+.dropdown-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+.dropdown-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.notification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+.notification-item.unread {
+  background-color: #e6f7ff; /* Light blue for unread */
+  font-weight: 500;
+}
+
+.notif-content {
+  margin: 0 0 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.notif-time {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.mark-read-btn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: #28a745;
+  cursor: pointer;
+  opacity: 0; 
+  transition: opacity 0.2s;
+}
+
+.notification-item:hover .mark-read-btn {
+  opacity: 1; 
+}
+
+.notification-item-empty {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+}

@@ -1,0 +1,689 @@
+:root {
+  --primary-blue: #0048d0;
+  --text-dark: #333;
+  --text-light: #8a8a8a;
+  --border-light: #eee;
+  --card-bg: #ffffff;
+  --tag-bg: #e0eaff;    
+  --tag-text: #0048d0; 
+  --status-open-bg: #ffebee;
+  --status-open-text: #e53935; 
+  
+  --stat-blue-bg: #eaf2f8;
+  --stat-blue-text: #3498db;
+  --stat-green-bg: #e8f8f5;
+  --stat-green-text: #1abc9c;
+  --stat-pending-bg: #eaf2f8;
+  --stat-pending-text: #3498db; 
+  --stat-yellow-bg: #fef9e7;
+  --stat-yellow-text: #f39c12;
+}
+
+.volunteer-home-main {
+  width: 100%;
+}
+
+.volunteer-home-main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.dashboard-section-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.view-all-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.card-subtitle {
+  color: var(--text-light);
+  margin: -10px 0 20px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Stats Grid */
+.impact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.impact-card {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.impact-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.impact-card h2 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  font-weight: 600;
+}
+
+.impact-card.stat-blue { background-color: var(--stat-blue-bg); }
+.impact-card.stat-blue p { color: var(--stat-blue-text); }
+.impact-card.stat-green { background-color: var(--stat-green-bg); }
+.impact-card.stat-green p { color: var(--stat-green-text); }
+.impact-card.stat-pending { background-color: var(--stat-pending-bg); }
+.impact-card.stat-pending p { color: var(--stat-pending-text); }
+.impact-card.stat-yellow { background-color: var(--stat-yellow-bg); }
+.impact-card.stat-yellow p { color: var(--stat-yellow-text); }
+
+/* Buttons */
+.browse-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.browse-all-btn,
+.view-all-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.browse-all-btn:hover,
+.view-all-btn:hover {
+  background-color: #003da8;
+  transform: translateY(-1px);
+}
+
+.browse-all-btn:active,
+.view-all-btn:active {
+  transform: translateY(0);
+}
+
+/* Opportunity List */
+.opportunity-list {
+  display: grid;
+  gap: 20px;
+}
+
+.opportunity-preview-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.opportunity-preview-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.opportunity-preview-card .card-header {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.opportunity-preview-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: capitalize;
+  flex-shrink: 0; 
+  white-space: nowrap;
+}
+
+.status-badge.status-open {
+  background-color: var(--status-open-bg);
+  color: var(--status-open-text);
+}
+
+.status-badge.status-closed {
+  background-color: #f0f0f0;
+  color: #777;
+}
+
+.ngo-id {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.view-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.view-details-link:hover {
+  text-decoration: underline;
+  color: #003da8;
+}
+
+.no-messages {
+  text-align: center;
+  color: var(--text-light);
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.loading-message,
+.error-message {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error-message {
+  color: red;
+  background-color: #ffebee;
+  border: 1px solid red;
+  border-radius: 8px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Large desktops (1400px and below) */
+@media (max-width: 1400px) {
+  .volunteer-home-main h1 {
+    font-size: 2.3rem;
+  }
+
+  .impact-card p {
+    font-size: 2.3rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Medium desktops (1200px and below) */
+@media (max-width: 1200px) {
+  .volunteer-home-main h1 {
+    font-size: 2.2rem;
+  }
+
+  .dashboard-section-card {
+    padding: 25px;
+  }
+
+  .impact-card-grid {
+    gap: 15px;
+  }
+
+  .impact-card p {
+    font-size: 2.2rem;
+  }
+
+  .impact-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .opportunity-preview-card h3 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Tablets landscape (1024px and below) */
+@media (max-width: 1024px) {
+  .volunteer-home-main h1 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .dashboard-section-card {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-header {
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+
+  .impact-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .impact-card {
+    padding: 18px;
+  }
+
+  .impact-card p {
+    font-size: 2rem;
+  }
+
+  .opportunity-preview-card {
+    padding: 18px;
+  }
+
+  .opportunity-preview-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets portrait (768px and below) */
+@media (max-width: 768px) {
+  .volunteer-home-main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .dashboard-section-card {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-header {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .view-all-link {
+    font-size: 0.85rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+    margin: -5px 0 15px 0;
+  }
+
+  .impact-card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .impact-card {
+    padding: 15px;
+  }
+
+  .impact-card p {
+    font-size: 1.8rem;
+  }
+
+  .impact-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .opportunity-list {
+    gap: 15px;
+  }
+
+  .opportunity-preview-card {
+    padding: 15px;
+  }
+
+  .opportunity-preview-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .ngo-id {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .view-details-link {
+    font-size: 0.9rem;
+  }
+
+  .browse-all-btn,
+  .view-all-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .browse-all-container {
+    margin-top: 15px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .volunteer-home-main h1 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .dashboard-section-card {
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-header {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .view-all-link {
+    font-size: 0.8rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.85rem;
+    margin: -3px 0 12px 0;
+  }
+
+  .impact-card-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .impact-card {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .impact-card p {
+    font-size: 1.6rem;
+    margin-bottom: 3px;
+  }
+
+  .impact-card h2 {
+    font-size: 0.85rem;
+  }
+
+  .opportunity-list {
+    gap: 12px;
+  }
+
+  .opportunity-preview-card {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .opportunity-preview-card .card-header {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .opportunity-preview-card h3 {
+    font-size: 1rem;
+  }
+
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 3px 7px;
+  }
+
+  .ngo-id {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .tags-container {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .view-details-link {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+
+  .browse-all-btn,
+  .view-all-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .browse-all-container {
+    margin-top: 12px;
+  }
+
+  .no-messages {
+    padding: 15px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+  .volunteer-home-main h1 {
+    font-size: 1.4rem;
+  }
+
+  .dashboard-section-card {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-header {
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .view-all-link {
+    font-size: 0.75rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .impact-card {
+    padding: 10px;
+  }
+
+  .impact-card p {
+    font-size: 1.4rem;
+  }
+
+  .impact-card h2 {
+    font-size: 0.8rem;
+  }
+
+  .opportunity-preview-card {
+    padding: 10px;
+  }
+
+  .opportunity-preview-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .status-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .ngo-id {
+    font-size: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .skill-tag {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .view-details-link {
+    font-size: 0.8rem;
+  }
+
+  .browse-all-btn,
+  .view-all-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .volunteer-home-main h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .dashboard-section-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-header {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .impact-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .impact-card {
+    padding: 10px;
+  }
+
+  .impact-card p {
+    font-size: 1.5rem;
+  }
+
+  .impact-card h2 {
+    font-size: 0.8rem;
+  }
+
+  .opportunity-preview-card {
+    padding: 12px;
+  }
+
+  .browse-all-btn,
+  .view-all-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}

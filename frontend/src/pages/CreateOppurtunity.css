@@ -1,0 +1,250 @@
+
+:root {
+  --primary-blue: #0048d0;
+  --dark-blue: #003da8;
+  --text-dark: #333;
+  --text-light-gray: #8a8a8a;
+  --border-color-light: #e0e0e0;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff; 
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 6px 16px rgba(0, 72, 208, 0.15);
+}
+
+.create-opportunity-page {
+  width: 100%;
+  max-width: 900px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+
+.page-header-back {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px; 
+  color: var(--text-dark);
+  font-size: 1.5rem; 
+  font-weight: 600;
+}
+
+.back-arrow-btn {
+  background: none; 
+  border: none; 
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 1.5rem; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 0; 
+  transition: color 0.2s ease-in-out;
+}
+
+.back-arrow-btn:hover {
+  color: var(--primary-blue); 
+}
+
+.page-header-back h1 {
+  margin: 0; 
+  font-size: 1.8rem; 
+  font-weight: 600;
+}
+
+
+
+.form-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  padding: 35px;
+}
+
+.form-group {
+  margin-bottom: 25px; 
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark); 
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-light-gray); 
+  opacity: 1; 
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px; 
+}
+
+.form-group select {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238a8a8a%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.6-3.6%205.4-7.9%205.4-12.9%200-5-1.8-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  padding-right: 40px; 
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(0, 72, 208, 0.1);
+}
+
+
+.required-input-group {
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+.required-input-group input {
+  flex-grow: 1;
+}
+
+.add-skill-btn {
+  padding: 12px 25px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-skill-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+.form-footer-buttons {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 15px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #f0f0f0; 
+}
+
+.cancel-btn,
+.create-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0; 
+  border: 1px solid var(--border-color-light);
+  color: var(--text-dark);
+}
+
+.cancel-btn:hover {
+  background-color: #e6e6e6;
+  border-color: #d0d0d0;
+}
+
+.create-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 72, 208, 0.1); 
+}
+
+.create-btn:hover {
+  background-color: var(--dark-blue);
+  transform: translateY(-1px); 
+  box-shadow: var(--shadow-hover);
+}
+
+.create-btn:disabled {
+  background-color: #c0c0c0;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+
+.error-message {
+  color: #d93025;
+  background-color: #fbe9e7;
+  border: 1px solid #d93025;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr; 
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+  
+  .page-header-back {
+    font-size: 1.2rem;
+  }
+  .page-header-back h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Small button for Add Skill */
+.btn-small {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+}
+
+/* Form footer buttons smaller and compact */
+.form-footer-buttons .cancel-btn,
+.form-footer-buttons .create-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+

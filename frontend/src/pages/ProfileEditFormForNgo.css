@@ -1,0 +1,173 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  max-width: 900px;
+  margin: 30px auto;
+  transition: all 0.3s ease;
+}
+
+.container-left,
+.container-right {
+  flex: 1;
+}
+
+.container-right {
+  margin-top: 50px;
+}
+
+/* Profile Picture Section */
+.form-pic {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px auto;
+}
+
+.avatar-preview {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.avatar-preview:hover {
+  transform: scale(1.02);
+}
+
+/* Avatar Buttons (Change + Remove on same line) */
+.avatar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.avatar-edit-btn,
+.avatar-remove-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.avatar-edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.avatar-edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.avatar-remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.avatar-remove-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Form Styling */
+.form {
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='url'],
+.form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #0a2fb6;
+  box-shadow: 0 0 5px rgba(10, 47, 182, 0.3);
+}
+
+/* Submit Button */
+.btn {
+  width: 100%;
+  padding: 12px 30px;
+  background-color: #0a2fb6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #08248a;
+}
+
+/* Error & Loading Messages */
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 50px;
+}
+
+#organization_description {
+  min-height: 3em; /* roughly 2 rows */
+  max-height: 6em; /* optional, limit max expansion */
+}
+.avatar-buttons-wrapper {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  gap: 20px;                 /* Space between Change & Remove */
+  margin-bottom: 20px;       /* Space below buttons */
+}
