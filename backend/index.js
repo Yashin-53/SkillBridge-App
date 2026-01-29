@@ -48,7 +48,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://skillbridge-app-1.onrender.com",
-      "https://skillbridge-frontend1.netlify.app"
+      "https://skillbridge-application.netlify.app"
     ],
     credentials: true
   })
@@ -78,7 +78,7 @@ const io = new Server(server, {
   cors: {
     origin: ["http://localhost:3000",
       "https://skillbridge-app-1.onrender.com",
-      "https://skillbridge-frontend1.netlify.app"
+      "https://skillbridge-application.netlify.app"
     ],
     methods: ["GET", "POST"]
   }
