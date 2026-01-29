@@ -47,7 +47,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://skillbridge-frontend.onrender.com"
+      "https://skillbridge-app-1.onrender.com"
     ],
     credentials: true
   })
