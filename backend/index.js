@@ -48,7 +48,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://skillbridge-app-1.onrender.com",
-      "https://your-netlify-site.netlify.app"
+      "https://skillbridge-frontend1.netlify.app"
     ],
     credentials: true
   })
