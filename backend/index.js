@@ -43,7 +43,16 @@ async function main() {
   await mongoose.connect(MONGO_URL);
 }
 
-app.use(cors({ origin: 'http://localhost:3000' })); 
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://skillbridge-frontend.onrender.com"
+    ],
+    credentials: true
+  })
+);
+
 app.use(express.json());
 
 app.use('/uploads', express.static('uploads'));
